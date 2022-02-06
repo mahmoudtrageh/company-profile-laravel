@@ -61,7 +61,7 @@
 
   </tbody>
 </table>
- 
+ {{$messages->links()}}
   
        </div>
     </div>

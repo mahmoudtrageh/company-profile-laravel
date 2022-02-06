@@ -92,7 +92,7 @@ public function Update(Request $request, $id){
     }
 
     public function AdminMessage(){
-        $messages = ContactForm::all();
+        $messages = ContactForm::latest()->paginate(4);
         return view('admin.contact.message',compact('messages'));
     }
 

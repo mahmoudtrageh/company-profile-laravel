@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title></title>
+  <title>تسجيل الدخول</title>
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet"/>
@@ -23,7 +23,7 @@
   <link href="{{ asset('backend/assets/plugins/daterangepicker/daterangepicker.css') }}" rel="stylesheet" />
 
   <!-- SLEEK CSS -->
-  <link id="sleek-css" rel="stylesheet" href="{{ asset('backend/assets/css/sleek.css') }}" />
+  <link id="sleek-css" rel="stylesheet" href="{{ asset('backend/assets/css/sleek.rtl.css') }}" />
 
   
 
@@ -57,7 +57,7 @@
                       <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
                     </g>
                   </svg>
-                  <span class="brand-name">Easy Dashboard</span>
+                  <span class="brand-name">موقع شركة</span>
                 </a>
               </div>
             </div> 
@@ -73,31 +73,28 @@
    @endif
             <div class="card-body p-5">
 
-              <h4 class="text-dark mb-5">Sign In</h4>
+              <h4 class="text-dark mb-5">تسجيل الدخول</h4>
               <form method="POST" action="{{ route('login') }}">
                @csrf
                 <div class="row">
                   <div class="form-group col-md-12 mb-4">
-                    <input type="email" name="email" class="form-control input-lg"   aria-describedby="emailHelp" placeholder="Email">
+                    <input type="email" name="email" class="form-control input-lg"   aria-describedby="emailHelp" placeholder="البريد الإلكتروني">
                   </div>
                   <div class="form-group col-md-12 ">
-                    <input type="password" class="form-control input-lg" name="password"  placeholder="Password">
+                    <input type="password" class="form-control input-lg" name="password"  placeholder="كلمة المرور">
                   </div>
                   <div class="col-md-12">
                     <div class="d-flex my-2 justify-content-between">
                       <div class="d-inline-block mr-3">
-                        <label class="control control-checkbox">Remember me
+                        <label class="control control-checkbox">تذكرني
                           <input type="checkbox" />
                           <div class="control-indicator"></div>
                         </label>
                 
                       </div>
-     <p><a class="text-blue" href="{{ route('password.request') }}">Forgot Your Password?</a></p>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign In</button>
-                    <p>Don't have an account yet ?
-       <a class="text-blue" href="{{ route('register') }}">Sign Up</a>
-                    </p>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">تسجيل الدخول</button>
+                   
                   </div>
                 </div>
               </form>
@@ -106,8 +103,8 @@
         </div>
       </div>
       <div class="copyright pl-0">
-        <p class="text-center">&copy; 2018 Copyright easy Dashboard   by
-          <a class="text-primary" href="http://www.easylearningbd.com/" target="_blank">Easy</a>.
+        <p class="text-center"> جميع الحقوق محفوظة &copy; 2022
+          <a class="text-primary" href="#" target="_blank">موقع شركة</a>
         </p>
       </div>
     </div>
