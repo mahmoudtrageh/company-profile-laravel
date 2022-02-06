@@ -29,7 +29,45 @@ class ContactController extends Controller
         'created_at' => Carbon::now()
     ]);
 
-    return Redirect()->route('admin.contact')->with('success','Contact Inserted Successfully');
+    return Redirect()->route('admin.contact')->with('success','تم إضافة التواصل بنجاح');
+
+ }
+
+ public function Edit($id){
+    $contacts = Contact::find($id);
+    return view('admin.contact.edit',compact('contacts'));
+
+}
+
+
+public function Update(Request $request, $id){
+
+
+    Contact::find($id)->update([
+        'email' => $request->email,
+        'phone' => $request->phone,
+        'address' => $request->address,
+        'created_at' => Carbon::now()
+    ]);
+
+    $notification = array(
+        'message' => 'تم تحديث التواصل بنجاح',
+        'alert-type' => 'info'
+    );         
+    return Redirect()->back()->with($notification);
+
+   
+}
+
+
+ public function Delete($id){
+   
+    Contact::find($id)->delete();
+    $notification = array(
+        'message' => 'تم حذف التواصل بنجاح',
+        'alert-type' => 'error'
+    );   
+    return Redirect()->back()->with($notification);
 
  }
  
@@ -49,7 +87,7 @@ class ContactController extends Controller
             'created_at' => Carbon::now()
         ]);
     
-        return Redirect()->route('contact')->with('success','Your Message Send Successfully');
+        return Redirect()->route('contact')->with('success','تم إرسال رسالتك بنجاح');
 
     }
 

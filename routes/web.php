@@ -89,6 +89,9 @@ Route::post('/multi/add', [BrandController::class, 'StoreImg'])->name('store.ima
 Route::get('/home/slider', [HomeController::class, 'HomeSlider'])->name('home.slider');
 Route::get('/add/slider', [HomeController::class, 'AddSlider'])->name('add.slider');
 Route::post('/store/slider', [HomeController::class, 'StoreSlider'])->name('store.slider');
+Route::get('/slider/edit/{id}', [HomeController::class, 'Edit']);
+Route::post('/slider/update/{id}', [HomeController::class, 'Update']);
+Route::get('/slider/delete/{id}', [HomeController::class, 'Delete']);
 
 
 
@@ -111,6 +114,9 @@ Route::get('/admin/contact', [ContactController::class, 'AdminContact'])->name('
 Route::get('/admin/add/contact', [ContactController::class, 'AdminAddContact'])->name('add.contact');
 Route::post('/admin/store/contact', [ContactController::class, 'AdminStoreContact'])->name('store.contact');
 Route::get('/admin/message', [ContactController::class, 'AdminMessage'])->name('admin.message');
+Route::get('/contact/edit/{id}', [ContactController::class, 'Edit']);
+Route::post('/contact/update/{id}', [ContactController::class, 'Update']);
+Route::get('/contact/delete/{id}', [ContactController::class, 'Delete']);
 
 
 

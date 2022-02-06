@@ -22,11 +22,7 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            
-          </div>
-        </div>
+  
 
         <div class="row portfolio-container" data-aos="fade-up">
 

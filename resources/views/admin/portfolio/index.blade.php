@@ -19,7 +19,7 @@
     <table class="table table-responsive">
   <thead>
     <tr>
-      <th scope="col">SL No</th>
+      <th scope="col">#</th>
       <th scope="col">الإسم</th>
       <th scope="col">الصورة</th>
       <th scope="col">الرابط</th>
@@ -39,14 +39,14 @@
       <td> {{ $item->tag }} </td>
       <td> 
           @if($item->created_at ==  NULL)
-          <span class="text-danger"> No Date Set</span> 
+          <span class="text-danger"> لا يوجد تاريخ</span> 
           @else
       {{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}
           @endif
        </td>
        <td> 
        <a href="{{ url('portfolio/edit/'.$item->id) }}" class="btn btn-info">تعديل</a>
-       <a href="{{ url('portfolio/delete/'.$item->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">حذف</a>
+       <a href="{{ url('portfolio/delete/'.$item->id) }}" onclick="return confirm('هل أنت متأكد من الحذف')" class="btn btn-danger">حذف</a>
         </td> 
 
 

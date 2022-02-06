@@ -12,7 +12,7 @@
         <a href="{{ route('add.slider') }}"> <button class="btn btn-info">أضف سلايدر</button>  </a>
       </div>
   </div>
-    <div class="row">
+    <div class="row mt-3">
 
       
 <br><br>
@@ -32,17 +32,17 @@
    @endif
 
 
-          <div class="card-header"> All Slider </div>
+          <div class="card-header"> الجميع </div>
     
 
     <table class="table table-responsive">
   <thead>
     <tr>
-      <th scope="col" width="5%">SL </th>
-      <th scope="col" width="15%">Slider Title</th>
-      <th scope="col" width="25%">Description</th>
-      <th scope="col" width="15%">Image</th>
-      <th scope="col" width="15%">Action</th>
+      <th scope="col" width="5%"># </th>
+      <th scope="col" width="15%">عنوان السلايدر</th>
+      <th scope="col" width="25%">الوصف</th>
+      <th scope="col" width="15%">الصورة</th>
+      <th scope="col" width="15%">الإجراء</th>
     </tr>
   </thead>
   <tbody>
@@ -55,8 +55,8 @@
       <td> <img src="{{ asset($slider->image) }}" style="height:40px; width:70px;" > </td> 
        
        <td> 
-       <a href="{{ url('slider/edit/'.$slider->id) }}" class="btn btn-info">Edit</a>
-       <a href="{{ url('slider/delete/'.$slider->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">Delete</a>
+       <a href="{{ url('slider/edit/'.$slider->id) }}" class="btn btn-info">تعديل</a>
+       <a href="{{ url('slider/delete/'.$slider->id) }}" onclick="return confirm('هل أنت متأكد من عملية الحذف')" class="btn btn-danger">حذف</a>
         </td> 
 
 

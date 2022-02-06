@@ -33,7 +33,7 @@
 
     <div class="col-md-4">
      <div class="card">
-          <div class="card-header"> Multi Image </div>
+          <div class="card-header"> أضف صور متعددة </div>
           <div class="card-body"> 
 
           <form action="{{ route('store.image') }}" method="POST" enctype="multipart/form-data">
@@ -42,7 +42,7 @@
 
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Multi Image</label>
+    <label for="exampleInputEmail1">حدد الصور</label>
     <input type="file" name="image[]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" multiple="">
 
           @error('image')
@@ -50,7 +50,7 @@
           @enderror
 
   </div> 
-  <button type="submit" class="btn btn-primary">Add Image</button>
+  <button type="submit" class="btn btn-primary">أضف</button>
 </form>
 
        </div>

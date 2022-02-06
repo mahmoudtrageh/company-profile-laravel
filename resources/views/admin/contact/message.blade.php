@@ -6,7 +6,7 @@
    <div class="container">
     <div class="row">
 
-<h4>Admin Message </h4>
+<h4>صفحة الرسائل </h4>
     
 <br><br>
 
@@ -25,18 +25,18 @@
    @endif
 
 
-          <div class="card-header"> All Message Data </div>
+          <div class="card-header"> كل الرسائل </div>
     
 
     <table class="table">
   <thead>
     <tr>
-      <th scope="col" width="5%">SL </th>
-      <th scope="col" width="15%">Name </th>
-      <th scope="col" width="25%">Email</th>
-      <th scope="col" width="15%">Subject</th>
-      <th scope="col" width="15%">Message</th>
-      <th scope="col" width="15%">Action</th>
+      <th scope="col" width="5%"># </th>
+      <th scope="col" width="15%">الإسم </th>
+      <th scope="col" width="25%">البريد الإلكتروني</th>
+      <th scope="col" width="15%">الموضوع</th>
+      <th scope="col" width="15%">الرسالة</th>
+      <th scope="col" width="15%">الإجراء</th>
     </tr>
   </thead>
   <tbody>
@@ -51,7 +51,7 @@
        
        <td> 
         
-       <a href="{{ url('message/delete/'.$mess->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">Delete</a>
+       <a href="{{ url('message/delete/'.$mess->id) }}" onclick="return confirm('هل أنت متأكد من الحذف')" class="btn btn-danger">حذف</a>
         </td> 
 
 

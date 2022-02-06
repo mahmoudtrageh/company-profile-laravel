@@ -6,13 +6,13 @@
    <div class="container">
     <div class="row">
         <div class="col-md-6">
-          <h4>Contact Page </h4>
+          <h4>صفحة التواصل </h4>
         </div>
         <div class="col-md-6 text-right">
-          <a href="{{ route('add.contact') }}"> <button class="btn btn-info">Add Contact</button>  </a>
+          <a href="{{ route('add.contact') }}"> <button class="btn btn-info">أضف تواصل</button>  </a>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-3">
 
      
 
@@ -34,17 +34,17 @@
    @endif
 
 
-          <div class="card-header"> All Contact Data </div>
+          <div class="card-header"> بيانات التواصل </div>
     
 
     <table class="table table-responsive">
         <thead>
           <tr>
-            <th scope="col" width="5%">SL </th>
-            <th scope="col" width="15%">Contact Address</th>
-            <th scope="col" width="25%">Contact Email</th>
-            <th scope="col" width="15%">Contact Phone</th>
-            <th scope="col" width="15%">Action</th>
+            <th scope="col" width="5%"># </th>
+            <th scope="col" width="15%">العنوان</th>
+            <th scope="col" width="25%">البريد الإلكتروني</th>
+            <th scope="col" width="15%">الهاتف</th>
+            <th scope="col" width="15%">الإجراء</th>
           </tr>
         </thead>
         <tbody>
@@ -57,8 +57,8 @@
             <td> {{ $con->phone }} </td>
             
             <td> 
-            <a href="{{ url('contact/edit/'.$con->id) }}" class="btn btn-info">Edit</a>
-            <a href="{{ url('contact/delete/'.$con->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">Delete</a>
+            <a href="{{ url('contact/edit/'.$con->id) }}" class="btn btn-info">تعديل</a>
+            <a href="{{ url('contact/delete/'.$con->id) }}" onclick="return confirm('هل أنت متأكد من الحذف')" class="btn btn-danger">حذف</a>
               </td> 
     
     

@@ -19,7 +19,7 @@
     <table class="table table-responsive">
   <thead>
     <tr>
-      <th scope="col">SL No</th>
+      <th scope="col">#</th>
       <th scope="col">الأيقونة</th>
       <th scope="col">العنوان</th>
       <th scope="col">الوصف</th>
@@ -37,14 +37,14 @@
       <td> {{ $service->desc }} </td>
       <td> 
           @if($service->created_at ==  NULL)
-          <span class="text-danger"> No Date Set</span> 
+          <span class="text-danger"> لا يوجد تاريخ</span> 
           @else
       {{ Carbon\Carbon::parse($service->created_at)->diffForHumans() }}
           @endif
        </td>
        <td> 
        <a href="{{ url('service/edit/'.$service->id) }}" class="btn btn-info">تعديل</a>
-       <a href="{{ url('service/delete/'.$service->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">حذف</a>
+       <a href="{{ url('service/delete/'.$service->id) }}" onclick="return confirm('هل أنت متأكد من الحذف')" class="btn btn-danger">حذف</a>
         </td> 
 
 

@@ -13,17 +13,17 @@
 
 
 
-          <div class="card-header"> All Brand </div>
+          <div class="card-header"> جميع البراندات </div>
     
 
     <table class="table table-responsive">
   <thead>
     <tr>
-      <th scope="col">SL No</th>
-      <th scope="col">Brand Name</th>
-      <th scope="col">Brand Image</th>
-      <th scope="col">Created At</th>
-      <th scope="col">Action</th>
+      <th scope="col">#</th>
+      <th scope="col">إسم البراند</th>
+      <th scope="col">صورة البراند</th>
+      <th scope="col">الوقت</th>
+      <th scope="col">الإجراء</th>
     </tr>
   </thead>
   <tbody>
@@ -35,14 +35,14 @@
       <td> <img src="{{ asset($brand->brand_image) }}" style="height:40px; width:70px;" > </td> 
       <td> 
           @if($brand->created_at ==  NULL)
-          <span class="text-danger"> No Date Set</span> 
+          <span class="text-danger"> لا يوجد تاريخ</span> 
           @else
       {{ Carbon\Carbon::parse($brand->created_at)->diffForHumans() }}
           @endif
        </td>
        <td> 
-       <a href="{{ url('brand/edit/'.$brand->id) }}" class="btn btn-info">Edit</a>
-       <a href="{{ url('brand/delete/'.$brand->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">Delete</a>
+       <a href="{{ url('brand/edit/'.$brand->id) }}" class="btn btn-info">تعديل</a>
+       <a href="{{ url('brand/delete/'.$brand->id) }}" onclick="return confirm('هل أنت متأكد من الحذف')" class="btn btn-danger">حذف</a>
         </td> 
 
 
@@ -60,7 +60,7 @@
 
     <div class="col-lg-4 col-md-12">
      <div class="card">
-          <div class="card-header"> Add Brand </div>
+          <div class="card-header"> أضف براند </div>
           <div class="card-body">
           
          
@@ -68,7 +68,7 @@
           <form action="{{ route('store.brand') }}" method="POST" enctype="multipart/form-data">
           @csrf
   <div class="form-group">
-    <label for="exampleInputEmail1">Brand Name</label>
+    <label for="exampleInputEmail1">إسم البراند</label>
     <input type="text" name="brand_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
           @error('brand_name')
@@ -79,8 +79,8 @@
 
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Brand Image</label>
-    <input type="file" name="brand_image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1">صورة البراند</label>
+    <input type="file" name="brand_image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
           @error('brand_image')
                <span class="text-danger"> {{ $message }}</span>
@@ -91,7 +91,7 @@
 
 
      
-  <button type="submit" class="btn btn-primary">Add Brand</button>
+  <button type="submit" class="btn btn-primary">أضف</button>
 </form>
 
        </div>

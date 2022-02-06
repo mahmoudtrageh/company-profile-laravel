@@ -21,7 +21,7 @@
 
     <div class="col-md-8">
      <div class="card">
-          <div class="card-header"> Edit Brand </div>
+          <div class="card-header"> تعديل البراند </div>
           <div class="card-body">
           
          
@@ -30,7 +30,7 @@
           @csrf 
    <input type="hidden" name="old_image" value="{{ $brands->brand_image }}">
   <div class="form-group">
-    <label for="exampleInputEmail1">Update Brand Name</label>
+    <label for="exampleInputEmail1">إسم البراند</label>
     <input type="text" name="brand_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $brands->brand_name }}">
 
           @error('brand_name')
@@ -41,7 +41,7 @@
 
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Update Brand Image</label>
+    <label for="exampleInputEmail1">صورة البراند</label>
     <input type="file" name="brand_image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $brands->brand_image }}">
 
           @error('brand_image')
@@ -58,7 +58,7 @@
 
 
      
-  <button type="submit" class="btn btn-primary">Update Brand</button>
+  <button type="submit" class="btn btn-primary">تحديث</button>
 </form>
 
        </div>

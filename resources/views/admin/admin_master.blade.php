@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Easy - Admin Dashboard </title>
+  <title>لوحة التحكم</title>
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet"/>
@@ -96,17 +96,17 @@
 
                       <li>
                         <a href="{{ route('profile.update') }}">
-                          <i class="mdi mdi-account"></i> My Profile
+                          <i class="mdi mdi-account"></i> الملف الشخصي
                         </a>
                       </li>
                       <li>
                         <a href="{{ route('change.password') }}">
-                          <i class="mdi mdi-email"></i> Change Password
+                          <i class="mdi mdi-email"></i> كلمة المرور
                         </a>
                       </li>
                      
                       <li class="dropdown-footer">
-                        <a href="{{ route('user.logout') }}"> <i class="mdi mdi-logout"></i> Log Out </a>
+                        <a href="{{ route('user.logout') }}"> <i class="mdi mdi-logout"></i> تسجيل الخروج </a>
                       </li>
                     </ul>
                   </li>
@@ -131,13 +131,13 @@
                   <footer class="footer mt-auto">
             <div class="copyright bg-white">
               <p>
-                &copy; <span id="copy-year">2022</span> جميع الحقوق محفوظة
+                  جميع الحقوق محفوظة <span id="copy-year">2022</span> &copy;
                 <a
                   class="text-primary"
                   href="#"
                   target="_blank"
-                  >معرض أعمال</a
-                >.
+                  >موقع الشركة</a
+                >
               </p>
             </div>
             <script>

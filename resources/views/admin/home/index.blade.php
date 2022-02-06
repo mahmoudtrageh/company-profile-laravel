@@ -12,7 +12,7 @@
         <a href="{{ route('add.about') }}"> <button class="btn btn-info">أضف</button>  </a>
       </div>
   </div>
-    <div class="row">
+    <div class="row mt-3">
 
 
 <br><br>
@@ -32,17 +32,17 @@
    @endif
 
 
-          <div class="card-header"> All About Data </div>
+          <div class="card-header"> الجميع </div>
     
 
     <table class="table table-responsive">
   <thead>
     <tr>
-      <th scope="col" width="5%">SL </th>
-      <th scope="col" width="15%">Home Title</th>
-      <th scope="col" width="25%">Short Description</th>
-      <th scope="col" width="15%">Long Description</th>
-      <th scope="col" width="15%">Action</th>
+      <th scope="col" width="5%"># </th>
+      <th scope="col" width="15%">العنوان</th>
+      <th scope="col" width="25%">الوصف القصير</th>
+      <th scope="col" width="15%">الوصف الطويل</th>
+      <th scope="col" width="15%">الإجراء</th>
     </tr>
   </thead>
   <tbody>
@@ -55,8 +55,8 @@
       <td> {{ $about->long_dis }} </td>
        
        <td> 
-       <a href="{{ url('about/edit/'.$about->id) }}" class="btn btn-info">Edit</a>
-       <a href="{{ url('about/delete/'.$about->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">Delete</a>
+       <a href="{{ url('about/edit/'.$about->id) }}" class="btn btn-info">تعديل</a>
+       <a href="{{ url('about/delete/'.$about->id) }}" onclick="return confirm('هل أنت متأكد من الحذف')" class="btn btn-danger">حذف</a>
         </td> 
 
 

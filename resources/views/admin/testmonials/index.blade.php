@@ -19,7 +19,7 @@
     <table class="table table-responsive">
   <thead>
     <tr>
-      <th scope="col">SL No</th>
+      <th scope="col">#</th>
       <th scope="col">المستخدم</th>
       <th scope="col">الوظيفة</th>
       <th scope="col">النص</th>
@@ -37,14 +37,14 @@
       <td> {{ $testmonial->text }} </td>
       <td> 
           @if($testmonial->created_at ==  NULL)
-          <span class="text-danger"> No Date Set</span> 
+          <span class="text-danger"> لا يوجد تاريخ</span> 
           @else
       {{ Carbon\Carbon::parse($testmonial->created_at)->diffForHumans() }}
           @endif
        </td>
        <td> 
        <a href="{{ url('testmonial/edit/'.$testmonial->id) }}" class="btn btn-info">تعديل</a>
-       <a href="{{ url('testmonial/delete/'.$testmonial->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">حذف</a>
+       <a href="{{ url('testmonial/delete/'.$testmonial->id) }}" onclick="return confirm('هل أنت متأكد من الحذف')" class="btn btn-danger">حذف</a>
         </td> 
 
 

@@ -28,15 +28,6 @@ class BrandController extends Controller
 
 
     public function StoreBrand(Request $request){
-        $validatedData = $request->validate([
-            'brand_name' => 'required|unique:brands|min:4',
-            'brand_image' => 'required|mimes:jpg.jpeg,png',
-            
-        ],
-        [
-            'brand_name.required' => 'Please Input Brand Name',
-            'brand_image.min' => 'Brand Longer then 4 Characters', 
-        ]);
 
         $brand_image =  $request->file('brand_image');
 
@@ -59,7 +50,7 @@ class BrandController extends Controller
         ]);
          
         $notification = array(
-            'message' => 'Brand Inserted Successfully',
+            'message' => 'تم إضافة البراند بنجاح',
             'alert-type' => 'success'
         );
 
@@ -76,16 +67,7 @@ class BrandController extends Controller
  
 
     public function Update(Request $request, $id){
-
-        $validatedData = $request->validate([
-            'brand_name' => 'required|min:4',
-                       
-        ],
-        [
-            'brand_name.required' => 'Please Input Brand Name',
-            'brand_image.min' => 'Brand Longer then 4 Characters', 
-        ]);
-
+       
         $old_image = $request->old_image;
 
         $brand_image =  $request->file('brand_image');
@@ -107,7 +89,7 @@ class BrandController extends Controller
         ]);
 
         $notification = array(
-            'message' => 'Brand Updated Successfully',
+            'message' => 'تم تحديث البراند بنجاح',
             'alert-type' => 'info'
         );         
         return Redirect()->back()->with($notification);
@@ -118,7 +100,7 @@ class BrandController extends Controller
                 'created_at' => Carbon::now()
             ]);
             $notification = array(
-                'message' => 'Brand Updated Successfully',
+                'message' => 'تم تحديث البراند بنجاح',
                 'alert-type' => 'warning'
             );    
              
@@ -135,7 +117,7 @@ class BrandController extends Controller
 
         Brand::find($id)->delete();
         $notification = array(
-            'message' => 'Brand Delete Successfully',
+            'message' => 'تم حذف البراند بنجاح',
             'alert-type' => 'error'
         );   
         return Redirect()->back()->with($notification);
@@ -171,7 +153,7 @@ class BrandController extends Controller
 
 
 
-            return Redirect()->back()->with('success','Brand Inserted Successfully');
+            return Redirect()->back()->with('success','تم إضافة الصور بنجاح');
 
  
      }
@@ -179,7 +161,7 @@ class BrandController extends Controller
 
      public function Logout(){
          Auth::logout();
-         return Redirect()->route('login')->with('success','User Logout');
+         return Redirect()->route('login')->with('success','تم تسجيل الخروج بنجاح');
      }
 
 

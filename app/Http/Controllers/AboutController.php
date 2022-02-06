@@ -27,7 +27,7 @@ class AboutController extends Controller
             'created_at' => Carbon::now()
         ]);
 
-        return Redirect()->route('home.about')->with('success','About Inserted Successfully');
+        return Redirect()->route('home.about')->with('success','تم إضافة عن الموقع بنجاح');
     }
 
 
@@ -44,12 +44,12 @@ class AboutController extends Controller
             
         ]);
 
-        return Redirect()->route('home.about')->with('success','About Updated Successfully');
+        return Redirect()->route('home.about')->with('success','تم تعديل عن الموقع بنجاح');
     }
 
     public function DeleteAbout($id){
         $delete = HomeAbout::find($id)->Delete();
-        return Redirect()->back()->with('success','About Deleted Successfully');
+        return Redirect()->back()->with('success','تم حذف عن الموقع بنجاح');
     }
 
     public function Portfolio(){
