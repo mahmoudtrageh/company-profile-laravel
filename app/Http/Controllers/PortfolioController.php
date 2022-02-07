@@ -75,11 +75,15 @@ class PortfolioController extends Controller
         $last_img = $up_location.$img_name;
         $img->move($up_location,$img_name);
 
-        unlink($old_image);
+        $file = public_path('image/portfolio/' . $old_image);
+
+        if( file_exists($file)){
+            unlink($old_image);
+        }
 
         Portfolio::find($id)->update([
             'name' => $request->name,
-            'img' => $img,
+            'img' => $last_img,
             'url' => $request->url,
             'tag' => $request->tag,
             'created_at' => Carbon::now()
